@@ -11,6 +11,9 @@
 		"lint": "biome ci ./",
 		"lint-fix": "biome check --write ./"
 	},
+	"dependencies": {
+		"@t2421/math": "workspace:*"
+	},
 	"devDependencies": {
 		"@t2421/typescript-config": "workspace:*",
 		"typescript": "5.5.4"
