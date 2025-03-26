@@ -15,7 +15,7 @@ jobs:
       - name: Download t2421 github action
         uses: actions/checkout@v4
         with:
-          token: 1234
+          token: ${{ secrets.GH_TOKEN }}
           repository: t2421/t2421-gh-actions
           path: .github/actions/t2421
 
