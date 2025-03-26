@@ -1,10 +1,12 @@
-import { Header } from "@repo/ui/header";
-import "./style.css";
-import typescriptLogo from "/typescript.svg";
-import { Counter } from "@repo/ui/counter";
-import { setupCounter } from "@repo/ui/setup-counter";
+import { Header } from "@t2421/ui/header"
+import "./style.css"
+import { Counter } from "@t2421/ui/counter"
+import { setupCounter } from "@t2421/ui/setup-counter"
+import typescriptLogo from "/typescript.svg"
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+const appElement = document.querySelector<HTMLDivElement>("#app")
+if (appElement) {
+	appElement.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -17,6 +19,9 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       ${Counter()}
     </div>
   </div>
-`;
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+`
+	const counterElement = document.querySelector<HTMLButtonElement>("#counter")
+	if (counterElement) {
+		setupCounter(counterElement)
+	}
+}
