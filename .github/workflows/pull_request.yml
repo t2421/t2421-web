@@ -15,9 +15,9 @@ jobs:
       - name: Download t2421 github action
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.GH_TOKEN }}
           repository: t2421/t2421-gh-actions
           path: .github/actions/t2421
-          token: ${{ secrets.GH_TOKEN }}
 
       - uses: ./.github/actions/t2421/setup-npmrc
         with:
