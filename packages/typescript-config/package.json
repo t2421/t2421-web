@@ -4,6 +4,6 @@
   "private": true,
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+      "@t2421:registry": "https://npm.pkg.github.com"
   }
 }
