@@ -1,7 +1,7 @@
 {
     "name": "@t2421/math",
     "type": "module",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publishConfig": {
       "@t2421:registry": "https://npm.pkg.github.com"
     },
@@ -17,6 +17,10 @@
       "./subtract": {
         "types": "./src/subtract.ts",
         "default": "./dist/subtract.js"
+      },
+      "./multiply": {
+        "types": "./src/multiply.ts",
+        "default": "./dist/multiply.js"
       }
     },
     "devDependencies": {
