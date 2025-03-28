@@ -1,10 +1,10 @@
-import { Header } from "@t2421/ui/header";
-import "./style.css";
-import { Counter } from "@t2421/ui/counter";
-import { setupCounter } from "@t2421/ui/setup-counter";
-import typescriptLogo from "/typescript.svg";
+import { Header } from "@t2421/ui/header"
+import "./style.css"
+import { Counter } from "@t2421/ui/counter"
+import { setupCounter } from "@t2421/ui/setup-counter"
+import typescriptLogo from "/typescript.svg"
 
-const appElement = document.querySelector<HTMLDivElement>("#app");
+const appElement = document.querySelector<HTMLDivElement>("#app")
 if (appElement) {
 	appElement.innerHTML = `
     <div>
@@ -19,10 +19,10 @@ if (appElement) {
         ${Counter()}
       </div>
     </div>
-  `;
+  `
 }
 
-const counterElement = document.querySelector<HTMLButtonElement>("#counter");
+const counterElement = document.querySelector<HTMLButtonElement>("#counter")
 if (counterElement) {
-	setupCounter(counterElement);
+	setupCounter(counterElement)
 }

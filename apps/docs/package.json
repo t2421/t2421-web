@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite --clearScreen false",
@@ -17,5 +17,8 @@
     "@t2421/typescript-config": "workspace:*",
     "typescript": "5.5.4",
     "vite": "^5.1.4"
+  },
+  "publishConfig": {
+      "@t2421:registry": "https://npm.pkg.github.com"
   }
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@t2421/ui",
-	"version": "0.0.0",
+	"version": "0.0.3",
 	"exports": {
 		"./counter": "./components/counter.ts",
 		"./header": "./components/header.ts",
@@ -17,5 +17,8 @@
 	"devDependencies": {
 		"@t2421/typescript-config": "workspace:*",
 		"typescript": "5.5.4"
-	}
+	},
+	"publishConfig": {
+      "@t2421:registry": "https://npm.pkg.github.com"
+}
 }

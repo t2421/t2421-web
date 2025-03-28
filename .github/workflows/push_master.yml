@@ -1,0 +1,51 @@
+# github actions for Pull Request
+name: 'Master branch workflow'
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Download t2421 github action
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          repository: t2421/t2421-gh-actions
+          path: .github/actions/t2421
+
+      - uses: ./.github/actions/t2421/setup-npmrc
+        with:
+          auth_token: ${{ secrets.GH_TOKEN }}
+
+      - uses: ./.github/actions/setup-git-config
+
+      - uses: ./.github/actions/setup-deps
+        with:
+          node_version: 22
+      
+      - name: Create/update release PR
+        id: changesets
+        uses: changesets/action@v1
+        env:
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Publish changed packages
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        shell: bash
+        run: |
+          pnpm run build
+          pnpm publish -r --no-git-checks
+          pnpm run changeset tag
+          git push --follow-tags
+

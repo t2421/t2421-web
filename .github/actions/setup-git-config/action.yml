@@ -1,0 +1,14 @@
+name: 'Setup git config'
+description: 'Setup git config for the project'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Configure Git client
+      env:
+        GIT_USER_NAME: 't2421 CI'
+        GIT_USER_EMAIL: '2717732+t2421@users.noreply.github.com'
+      shell: bash
+      run: |
+        git config --global user.name "${GIT_USER_NAME}"
+        git config --global user.email "${GIT_USER_EMAIL}"
