@@ -1,7 +1,7 @@
 {
     "name": "@t2421/math",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "publishConfig": {
       "@t2421:registry": "https://npm.pkg.github.com"
     },
