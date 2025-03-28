@@ -1,6 +1,9 @@
 {
     "name": "@t2421/math",
     "type": "module",
+    "publishConfig": {
+      "@t2421:registry": "https://npm.pkg.github.com"
+    },
     "scripts": {
       "dev": "tsc --watch",
       "build": "tsc"
