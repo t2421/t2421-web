@@ -25,6 +25,10 @@
     "./square": {
       "types": "./src/square.ts",
       "default": "./dist/square.js"
+    },
+    "./divide": {
+      "types": "./src/divide.ts",
+      "default": "./dist/divide.js"
     }
   },
   "devDependencies": {
