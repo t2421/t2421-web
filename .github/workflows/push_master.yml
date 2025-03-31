@@ -1,7 +1,7 @@
 # github actions for Pull Request
 name: 'Master branch workflow'
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -31,7 +31,11 @@ jobs:
       - uses: ./.github/actions/setup-deps
         with:
           node_version: 22
-      
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: vx.x.x
+  
       - name: Create/update release PR
         id: changesets
         uses: changesets/action@v1
@@ -46,7 +50,7 @@ jobs:
         shell: bash
         run: |
           pnpm run build
-          pnpm publish -r --no-git-checks
+          deno run --allow-read --allow-run ./.github/scripts/publish.ts
           pnpm run changeset tag
           git push --follow-tags
 
