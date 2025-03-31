@@ -1,5 +1,11 @@
 # @t2421/typescript-config
 
+## 0.1.2
+
+### Patch Changes
+
+- 9e0c12f: Publish
+
 ## 0.1.1
 
 ### Patch Changes
