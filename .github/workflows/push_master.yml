@@ -38,6 +38,7 @@ jobs:
         env:
           commit: "chore: update versions"
           title: "chore: update versions"
+          version: pnpm changeset version
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Publish changed packages
