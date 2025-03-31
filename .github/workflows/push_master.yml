@@ -31,13 +31,10 @@ jobs:
       - uses: ./.github/actions/setup-deps
         with:
           node_version: 22
-      - name: Install Deno
-        run: |
-          curl -fsSL https://deno.land/install.sh | sh
-          echo "Deno version:"
-          ~/.deno/bin/deno --version
-        env:
-          DENO_INSTALL: ~/.deno
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: vx.x.x
   
       - name: Create/update release PR
         id: changesets
