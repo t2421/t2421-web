@@ -1,14 +1,14 @@
 {
   "name": "docs",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite --clearScreen false",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "biome ci ./src",
-		"lint-fix": "biome check --write ./src"
+    "lint-fix": "biome check --write ./src"
   },
   "dependencies": {
     "@t2421/ui": "workspace:*"
@@ -19,6 +19,6 @@
     "vite": "^5.1.4"
   },
   "publishConfig": {
-      "@t2421:registry": "https://npm.pkg.github.com"
+    "@t2421:registry": "https://npm.pkg.github.com"
   }
 }

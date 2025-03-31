@@ -1,9 +1,9 @@
 {
   "name": "@t2421/typescript-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
   "license": "MIT",
   "publishConfig": {
-      "@t2421:registry": "https://npm.pkg.github.com"
+    "@t2421:registry": "https://npm.pkg.github.com"
   }
 }
