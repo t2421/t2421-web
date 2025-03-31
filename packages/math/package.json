@@ -1,34 +1,34 @@
 {
-    "name": "@t2421/math",
-    "type": "module",
-    "version": "0.0.5",
-    "publishConfig": {
-      "@t2421:registry": "https://npm.pkg.github.com"
+  "name": "@t2421/math",
+  "type": "module",
+  "version": "0.0.6",
+  "publishConfig": {
+    "@t2421:registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "./add": {
+      "types": "./src/add.ts",
+      "default": "./dist/add.js"
     },
-    "scripts": {
-      "dev": "tsc --watch",
-      "build": "tsc"
+    "./subtract": {
+      "types": "./src/subtract.ts",
+      "default": "./dist/subtract.js"
     },
-    "exports": {
-      "./add": {
-        "types": "./src/add.ts",
-        "default": "./dist/add.js"
-      },
-      "./subtract": {
-        "types": "./src/subtract.ts",
-        "default": "./dist/subtract.js"
-      },
-      "./multiply": {
-        "types": "./src/multiply.ts",
-        "default": "./dist/multiply.js"
-      },
-      "./square": {
-        "types": "./src/square.ts",
-        "default": "./dist/square.js"
-      }
+    "./multiply": {
+      "types": "./src/multiply.ts",
+      "default": "./dist/multiply.js"
     },
-    "devDependencies": {
-      "@t2421/typescript-config": "workspace:*",
-      "typescript": "latest"
+    "./square": {
+      "types": "./src/square.ts",
+      "default": "./dist/square.js"
     }
+  },
+  "devDependencies": {
+    "@t2421/typescript-config": "workspace:*",
+    "typescript": "latest"
   }
+}
