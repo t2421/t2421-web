@@ -36,6 +36,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         env:
+          commit: "chore: update versions"
+          title: "chore: update versions"
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Publish changed packages
