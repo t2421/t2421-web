@@ -40,6 +40,7 @@ jobs:
           title: "chore: update versions"
           version: pnpm changeset version
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          publish: pnpm publich-package
 
       - name: Publish changed packages
         if: steps.changesets.outputs.hasChangesets == 'false'
