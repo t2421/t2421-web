@@ -32,22 +32,12 @@ jobs:
         with:
           node_version: 22
       
-      - name: Create/update release PR
+      - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
-        env:
-          commit: "chore: update versions"
-          title: "chore: update versions"
-          version: pnpm changeset version
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
           publish: pnpm publich-package
-
-      - name: Publish changed packages
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        shell: bash
-        run: |
-          pnpm run build
-          pnpm changeset publish --since
-          pnpm run changeset tag
-          git push --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
 
