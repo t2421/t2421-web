@@ -36,7 +36,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm publich-package
+          publish: pnpm publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
