@@ -46,7 +46,7 @@ jobs:
         shell: bash
         run: |
           pnpm run build
-          pnpm publish -r --no-git-checks
+          pnpm changeset publish
           pnpm run changeset tag
           git push --follow-tags
 
