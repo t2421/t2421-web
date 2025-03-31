@@ -21,6 +21,10 @@
       "./multiply": {
         "types": "./src/multiply.ts",
         "default": "./dist/multiply.js"
+      },
+      "./square": {
+        "types": "./src/square.ts",
+        "default": "./dist/square.js"
       }
     },
     "devDependencies": {
