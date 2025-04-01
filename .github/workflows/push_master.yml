@@ -38,6 +38,6 @@ jobs:
         with:
           publish: pnpm publish-packages
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
 
