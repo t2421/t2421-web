@@ -1,4 +1,4 @@
 {
-  "extends": "@t2421/typescript-config/vite.json",
-  "include": ["src"]
+	"extends": "@t2421/typescript-config/vite.json",
+	"include": ["src"]
 }

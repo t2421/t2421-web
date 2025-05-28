@@ -1,10 +1,10 @@
 {
-  "extends": "./packages/typescript-config/base.json",
-  "compilerOptions": {
-    "target": "ESNext",
-    "outDir": "dist",
-    "rootDir": "."
-  },
-  "include": ["biomejs.config.ts"],
-  "exclude": ["node_modules"]
+	"extends": "./packages/typescript-config/base.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"outDir": "dist",
+		"rootDir": "."
+	},
+	"include": ["biomejs.config.ts"],
+	"exclude": ["node_modules"]
 }
